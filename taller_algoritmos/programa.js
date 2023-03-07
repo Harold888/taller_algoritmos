@@ -48,3 +48,31 @@ function media(){
     return promedio;
     
 }
+
+function calcular_tiempo(){
+    
+    let v1= parseInt(document.getElementById("x").value);
+    let v2= parseInt(document.getElementById("y").value);
+    let d= parseInt(document.getElementById("z").value);
+
+    let t=d/(v1-v2);
+    let tf=t*60
+
+    let resultado= document.getElementById("resultado");
+    resultado.value= tf;
+    return tf;
+}
+ 
+function notas(){
+
+    let notaParcialUno = parseFloat(document.getElementById("notaParcialUno").value);
+    let notaParcialDos = parseFloat(document.getElementById("notaParcialDos").value);
+    let notaParcialTres = parseFloat(document.getElementById("notaParcialTres").value);
+    let notaExamen = parseFloat(document.getElementById("notaExamen").value);
+    let notaTrabajo = parseFloat(document.getElementById("notaParcialTres").value);
+    let notaParcial=(notaParcialUno+notaParcialDos+notaParcialTres)/3;
+    let notaFinal =(notaParcial*0.55)+(notaExamen*0.3)+(notaTrabajo*0.15);
+
+    console.log(notaFinal);
+    return notaFinal;
+}
